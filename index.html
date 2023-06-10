@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACK - DEVELOPER PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 19, 7);
+            color: white;
+            font-family: 'Fira Sans', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 70px;
+            background-color: rgb(15, 48, 32);
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            font-size: 1.1rem;
+            color: rgb(51, 108, 51);
+        }
+
+        main hr {
+            border: 0;
+            background: #348734;
+            height: 1.1px;
+            margin: 30px 64px;
+
+        }
+
+        main h1 {
+            max-width: 80vw;
+            margin-top: 10PX;
+            display: flex;
+            justify-content: right;
+            font-size: 2rem;
+
+            padding-right: 45%;
+
+        }
+
+        .left-nav {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        .firstsection>div {
+            width: 30%;
+
+        }
+
+        .leftsection {
+
+            font-size: 2.2rem;
+
+        }
+
+        .leftsection .btn {
+            padding: 12px;
+            background-color: #0d250d;
+            border: 1px solid white;
+            border-radius: 7px;
+            font-size: 15px;
+            cursor: pointer;
+
+        }
+
+        .rightsection img {
+            width: 80%;
+            margin: 30px;
+        }
+
+        .purple {
+            color: rgb(42, 88, 60);
+        }
+
+        #element {
+            color: rgb(42, 88, 60);
+            ;
+        }
+
+        .secondsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 30PX 0;
+
+        }
+
+        .leftabout {
+
+            width: 30%;
+        }
+
+        .rightabout {
+            font-size: 1.8rem;
+            width: 50%;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .leftabout img {
+            margin-top: 10PX;
+            width: 100%;
+        }
+
+        .thirdsection {
+            background-color: #021502;
+        }
+
+        .myskills {
+            display: flex;
+            margin-left: 15%;
+            font-size: 2.5rem;
+        }
+
+        .skilltype {
+            margin-left: 60%;
+            font-size: 1.2rem;
+        }
+
+        .myservices {
+            display: flex;
+        }
+
+        .fourthsection hr {
+            margin: 10px 25px;
+        }
+
+        .container {
+            float: left;
+            width: 28%;
+            margin: 30px;
+            border: 2px solid rgb(3, 32, 1);
+            text-align: center;
+            border-radius: 15px;
+
+
+        }
+
+        .container:hover {
+            cursor: pointer;
+            background-color: #031e03;
+
+        }
+
+        .fourthsection::after {
+            content: "";
+            display: flex;
+            clear: both;
+
+        }
+
+        .container img {
+            padding-top: 10px;
+            width: 20%;
+        }
+
+        .container .image {
+            width: 100%;
+        }
+
+        .fifthsection {
+            display: flex;
+        }
+
+        .project {
+            float: left;
+            width: 28%;
+            margin: 30px;
+
+            text-align: center;
+            box-sizing: border-box;
+
+            padding: 30px 0 30px 0;
+
+        }
+
+        .myproject {
+            display: flex;
+        }
+
+        .project img {
+            width: 60%;
+            border: 1px solid green;
+            padding: 10px;
+            border-radius: 7px;
+
+        }
+
+
+        .contact-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 34px;
+            padding-top: 20px;
+        }
+
+        .contact-box input,
+        .contact-box textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 10px;
+            font-size: 1.2rem;
+        }
+
+        .contact-box form {
+            width: 40%;
+            font-size: 1.3rem;
+        }
+
+        .burger {
+            display: none;
+            position: absolute;
+            cursor: pointer;
+            right: 5%;
+            top: 20px;
+        }
+
+        .line {
+            width: 25px;
+            background-color: white;
+            height: 4px;
+            margin: 5px 3px;
+        }
+
+
+        /* Media Query*/
+
+        @media only screen and (max-width: 890px) {
+
+            .navbar {
+                flex-direction: column;
+                height: 500px;
+                transition: all 0.7s ease-out;
+
+            }
+
+            .nav-list {
+                flex-direction: column;
+
+            }
+
+            nav ul li {
+                padding: 20px;
+            }
+
+            .burger {
+                display: block;
+            }
+
+            .h-nav {
+                height: 62px;
+            }
+
+            .v-class {
+                opacity: 0;
+
+            }
+
+            .firstsection {
+                max-width: 100%;
+            }
+
+            .leftsection {
+                font-size: 12px;
+            }
+
+            .leftsection .btn {
+                font-size: 8px;
+                padding: 4px;
+                margin: 3px;
+            }
+
+            .rightsection img {
+                width: 100%;
+                height: 50%;
+                margin: 10px;
+            }
+
+            .secondsection {
+                max-width: 100%;
+
+            }
+
+            .leftabout img {
+                width: 100%;
+                height: 60%;
+                padding: 40px;
+            }
+
+            .rightabout {
+                font-size: 12px;
+            }
+
+            .fourthsection {
+                max-width: 100%;
+            }
+
+            .myservices {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+            }
+
+            .container {
+                padding: 0 20px 0 20px;
+                font-size: 12px;
+                margin: 15px;
+                width: 60%;
+
+            }
+
+            .fifthsection {
+                max-width: 100%;
+            }
+
+            .myproject {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            .project img{
+                width: 100%;
+
+            }
+            .contact-box input,
+        .contact-box textarea {
+            font-size: 15px;
+        }
+        .contact-box form {
+            width: 80%;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar h-nav">
+            <div class="left-nav v-class">Jack's Portfolio</div>
+            <div class="right-nav  v-class">
+                <ul class="nav-list ">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About me</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact me</a></li>
+                </ul>
+            </div>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hey, My name is <span class="purple">Jack</span>
+                <div>And I'm a passionate</div>
+
+                <span id="element"></span>
+                
+                <div class="button">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit Github</button>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="bg.png.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <h1 class="about"> About Me</h1>
+        <section class="secondsection">
+
+
+            <div class="leftabout">
+                <img src="second.png" alt="">
+            </div>
+            <div class="rightabout">
+                I'm frontend developer, I creat web pages with UI/UX user interface.
+                I have basic experience and also more interest in web development. I also inrterested in backend
+                development.
+            </div>
+
+        </section>
+        <section class="thirdsection">
+            <div class="myskills">My <span class="purple"> Skills</span></div>
+            <div class="skilltype">
+                <ol>
+                    <li>HTML </li>
+                    <li>CSS</li>
+                    <LI>JavaScript</LI>
+                    <li>BootStrap</li>
+                    <li>Git &Github</li>
+                </ol>
+            </div>
+        </section>
+        <hr>
+        <section class="fourthsection">
+            <h1>My Services</h1>
+            <div class="myservices">
+                <div class="container">
+                    <img src="webdevelopment.png" alt="">
+                    <h4>Web Developer</h4>
+                    <hr>
+                    <p>Development of custom web pages. Using current technologies and libraries of the lanor field.</p>
+                </div>
+                <div class="container">
+                    <img src="webdesign.png" alt="">
+                    <h4>Web Designer</h4>
+                    <hr>
+                    <p>I'll creates the layout and design of a website. It makes a site look good.I'm use design
+                        programs to
+                        create visual elements</p>
+
+                </div>
+                <div class="container">
+                    <div class="image">
+                        <img src="photoeditor1.png" alt="">
+                    </div>
+                    <h4>Photo Edotor</h4>
+                    <hr>
+                    <p>Photo editting for my self. I'll write shayries and edit into photos and post on social media
+                        accounts.</p>
+
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="fifthsection">
+            <div class="projectclass">
+                <h1>My Project</h1>
+                <div class="myproject">
+                    <div class="project">
+                        <img src="project.png" alt="">
+                    </div>
+                    <div class="project">
+                        <img src="project.png" alt="">
+                    </div>
+                    <div class="project">
+                        <img src="project.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h1>Contact Me</h1>
+            <div class="contact-box">
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" id="name" placeholder="Enter your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail: </label>
+                        <input type="email" name="email" id="email" placeholder="Enter your E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone ">Phone number: </label>
+                        <input type="number" name="name" id="phone" placeholder="Enter your number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message: </label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Photo Editor', 'Web Designer'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script src="resp.js"></script>
+</body>
+
+</html>
