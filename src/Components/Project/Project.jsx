@@ -1,7 +1,7 @@
 import React from 'react'
 import './project.css'
-import Project1 from '../../assets/work1.jpg'
-import Project2 from '../../assets/work2.jpg'
+import Project1 from '../../assets/CRUD-OPERATION.jpg'
+import Project2 from '../../assets/QUIZE-APP.jpg'
 import Project3 from '../../assets/work3.jpg'
 import Project4 from '../../assets/work4.jpg'
 import Project5 from '../../assets/work5.jpg'
@@ -45,16 +45,23 @@ const Project = () => {
                 modules={[Pagination]}
                >
                 <SwiperSlide className='project__card'>
+                <a href='https://operation-app.netlify.app' alt='' className='Project-Link' target='_blank'>
                     <img src={Project1} alt='' className='project__img' />
-                    <h3 className='project__name'>Project 1</h3>
+                    <h3 className='project__name'>Project 1: Crud operation</h3>
+                    </a>
+                
                 </SwiperSlide>
                 <SwiperSlide className='project__card'>
+                <a href='https://quize-app-kbc.netlify.app' alt='' className='Project-Link' target='_blank'>
                     <img src={Project2} alt='' className='project__img' />
-                    <h3 className='project__name'>Project 2</h3>
+                    <h3 className='project__name'>Project 2: Quize- App</h3>
+                    </a>
                 </SwiperSlide>
                 <SwiperSlide className='project__card'>
+                <a href='https://quize-app-kbc.netlify.app' alt='' className='Project-Link' target='_blank'>
                     <img src={Project3} alt='' className='project__img' />
                     <h3 className='project__name'>Project 3</h3>
+                    </a>
                 </SwiperSlide>
                 <SwiperSlide className='project__card'>
                     <img src={Project4} alt='' className='project__img' />
